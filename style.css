@@ -177,3 +177,16 @@ grid-column: 2;
   margin-right: 10px;
   background-color: #fb5;  
 }
+
+.copy{
+  grid-column: 3 / 5;
+  margin-bottom: 2rem;
+  background-color: #fb5;
+}
+
+.copy p {
+  padding: 20px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: bold;
+
+}
