@@ -65,3 +65,50 @@ img{
   margin-bottom: 1rem;
   grid-column: 1/ 4;
 }
+
+.descricaoAnimais h2 {
+  color: #e54;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 1rem;
+}
+
+
+.descricaoAnimais h2::before {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: #fb5;
+}
+
+.descricaoAnimais p {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.listaAnimais{
+  height: 370px;
+  overflow-y: scroll;
+  grid-column: 2;
+}
+
+.listaAnimais::-webkit-scrollbar {
+  width: 18px;
+}
+.listaAnimais::-webkit-scrollbar-thumb {
+ background-color: #fb5;
+ border-left: 4px solid #faf6ed;
+ border-right: 4px solid #faf6ed;
+}
+
+.descricaoAnimais{
+  grid-column: 3;
+}
+.descricaoAnimais section {
+  margin-bottom:  3rem;
+}
