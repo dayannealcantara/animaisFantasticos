@@ -210,7 +210,6 @@ grid-column: 2;
   display: block !important;
   animation: show .5s forwards;
 }
-
 @keyframes show{
   from{
     opacity: 0;
@@ -219,5 +218,31 @@ grid-column: 2;
   to{
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+.js-accordion dd{
+  display: none;
+}
+
+.js-accordion dt::after{
+  content:'⬎';
+
+  margin-left: 10px;
+}
+.js-accordion dt.ativo::after{
+  content: '⬏';
+}
+.js-accordion dd.ativo{
+  display: block;
+  animation: slideFaq .5s forwards;
+}
+@keyframes slideFaq{
+  from{
+    opacity: 0;
+    max-height: 0;
+  }
+  to{
+    opacity: 1;
+    max-height: 200px;
   }
 }
