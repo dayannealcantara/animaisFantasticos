@@ -58,3 +58,29 @@ function scrollSuave() {
   });
 }
 scrollSuave();
+
+function initModal() {
+  const botaoAbrir = document.querySelector('[data-modal="abrir"]');
+  const botaoFechar = document.querySelector('[data-modal="fechar"]');
+  const containerModal = document.querySelector('[data-modal="container"]');
+
+  if (botaoAbrir && botaoFechar && containerModal) {
+    function abrirModal(e) {
+      e.preventDefault();
+      containerModal.classList.add('ativo');
+    }
+    botaoAbrir.addEventListener('click', abrirModal);
+
+    function fecharModal(e) {
+      e.preventDefault();
+      containerModal.classList.remove('ativo');
+    }
+    botaoFechar.addEventListener('click', fecharModal);
+
+    function fecharForaModal(e) {
+      if (e.target === this) containerModal.classList.remove('ativo');
+    }
+    containerModal.addEventListener('click', fecharForaModal);
+  }
+}
+initModal();
