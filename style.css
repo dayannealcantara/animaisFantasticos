@@ -12,10 +12,14 @@ ul{
 
 body{
   background-color: #faf6ed;
-  color: #222;
+  color: #222;  
+  -webkit-font-smoothing: antialiased;
+}
+
+.gridContainer{
   display: grid;
   grid-template-columns:  1fr 120px minmax(300px, 800px) 1fr;
-  -webkit-font-smoothing: antialiased;
+
 }
 .menu{
   grid-column:3 / 5;
@@ -173,7 +177,7 @@ grid-column: 2;
 }
 
 @media (max-width:700px) {
-  body{
+  .gridContainer{
     grid-template-columns: 1fr;
   }
   .menu, .grid-section, .copy{
