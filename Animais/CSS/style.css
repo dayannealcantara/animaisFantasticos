@@ -250,3 +250,18 @@ grid-column: 2;
     max-height: 200px;
   }
 }
+
+[data-semana]::after{
+  display: inline-block;
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff0000;
+  margin-left: 4px;
+  border: 2px solid #000
+}
+
+[data-semana].aberto::after{
+  background: #8bde10;
+}
