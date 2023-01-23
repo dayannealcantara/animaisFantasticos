@@ -11,17 +11,27 @@
 
 <body>
   <div class="gridContainer">
-    <nav class="menu js-menu">
-      <ul>
+    <nav class="menu js-menu" data-menu="suave">
+      <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul data-menu="lista" id="menu">
         <li><a href="#animais">Animais</a></li>
+        <li data-dropdown>
+          <a href="#sobre.html">Sobre</a>
+          <ul class="dropdown-menu">
+            <li><a href="#empresa.html">Empresa</a></li>
+            <li><a href="#equipe.html">equipe</a></li>
+            <li><a href="#socios.html">Sócios</a></li>
+            <li><a href="#investidores.html">Investidores</a></li>
+          </ul>
+        </li>
         <li><a href="#faq">Faq</a></li>
         <li><a href="#contato">Contato</a></li>
-        <li><a data-modal="abrir" href="#">Login</a></li>
+        <li><a data-modal="abrir" href="login.html">Login</a></li>
         <li><a href="https://www.origamid.com/" target="_blank">Dev →</a></li>
       </ul>
     </nav>
 
-    <section class=" grid-section animais" id="animais">
+    <section class=" grid-section animais" data-anime="scroll" id="animais">
       <h1 class="titulo">Animais fantásticos</h1>
       <ul class="listaAnimais js-tabmenu">
         <li><img src="./img/imagem1.jpg" alt="imagem de raposa"></li>
@@ -33,7 +43,7 @@
       </ul>
 
       <div class="descricaoAnimais js-tabcontent">
-        <section>
+        <section data-anime="show-right">
           <h2>Raposa</h2>
           <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados
             por um focinho comprido e uma cauda longa e peluda.</p>
@@ -42,13 +52,13 @@
             qual a raposa vermelha é a mais comum.</p>
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
         </section>
-        <section>
+        <section data-anime="show-right">
           <h2>Esquilo</h2>
           <p>Os esquilos pertencem a uma grande família de mamíferos roedores, de pequeno e médio porte, conhecida como Sciuridae.</p>
           <p>Os esquilos estão espalhados por quase todo o mundo, a maioria nas zonas de climas temperado ou tropical, mas também em algumas zonas de clima frio. Como todos os roedores, possuem presas fortíssimas, com que roem facilmente sementes, principalmente bolotas.</p>
           <p>Depois de 28 dias de gestação, nascem 4 ou 5 filhotes (no máximo 7) duas vezes por ano. O seu tamanho varia muito, desde os pequenos esquilos Myosciurus pumilio, que têm de 7 a 10 cm de comprimento, às grandes marmotas da espécie Marmota marmota, que têm de 53 a 73 cm de comprimento (com a cauda).</p>
         </section>
-        <section>
+        <section data-anime="show-down">
           <h2>Urso</h2>
           <p>Os Ursos (latim científico: Ursidae) constituem uma família de mamíferos plantígrados, geralmente de grande porte, contendo os ursos e os pandas.</p>
           <p>Algumas características comuns dos ursos são pelagem espessa, rabo curto, o olfato desenvolvido e as garras não retráteis. Os ursídeos são geralmente animais omnívoros, mas se alimentam principalmente de carne.</p>
@@ -57,7 +67,7 @@
             Os ursos existem em todos os continentes, em exceção na África, embora algumas fontes afirmem terem avistado o Urso nandi, mas sem comprovarem a sua existência.
           </p>
         </section>
-        <section>
+        <section data-anime="show-down">
           <h2>Lobo</h2>
           <p>O lobo (também chamado de lobo-cinzento; nome científico: Canis lupus) é uma espécie de mamífero canídeo do gênero Canis. É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás. </p>
           <p>O peso e tamanho dos lobos variam muito em todo o mundo, tendendo a aumentar proporcionalmente com a latitude, como previsto pela teoria de Christian Bergmann. Em geral, a altura, medida a partir dos ombros, varia de 60 a 95 centímetros. </p>
@@ -66,13 +76,13 @@
             Os lobos têm pelos volumosos repartidos em duas camadas. A primeira camada é constituída por pelos resistentes que repelem água e sujeira. A segunda camada forma uma pelagem densa, isolante à água. O subpelo é espalhado pelo corpo na forma de grandes tufos no final da primavera ou início do verão (com variações anuais).
           </p>
         </section>
-        <section>
+        <section data-anime="show-down">
           <h2>Macaco</h2>
           <p>Macaco é um termo de origem africana (provavelmente do banto makako) utilizado como designação comum a todas as espécies de símios ou primatas antropoides. É aplicada restritivamente no Brasil aos cebídeos (ou macacos do Novo Mundo) em geral. No sentido estrito, "macaco" refere-se às espécies de primatas pertencentes ao género Macaca.</p>
           <p>A designação mico se origina, segundo o Dicionário Aurélio, do caraíba (karib) continental. É bastante usada no Brasil, onde costuma aplicar-se às espécies do gênero Cebus, no Sul, e às espécies de pequeno porte, ou saguis, no Norte. </p>
           <p>Os macacos variam em tamanho desde o sagui-pigmeu, que pode ser tão pequeno quanto 117 mm ( 4+5 ⁄ 8 pol) com 172 mm ( 6+3 ⁄ 4 pol) de cauda e pouco mais de 100 g ( 3+1 ⁄ 2 oz) em peso[5], para o mandril macho, quase 1 m (3 pés 3 pol) de comprimento e pesando até 36 kg (79 lb). Alguns são arbóreos (vivendo em árvores), enquanto outros vivem na savana ; as dietas diferem entre as várias espécies, mas podem conter qualquer um dos seguintes alimentos: frutas, folhas, sementes, nozes, flores, ovos e pequenos animais (incluindo insetos e aranhas)</p>
         </section>
-        <section>
+        <section data-anime="show-down">
           <h2>Leão</h2>
           <p>O leão [feminino: leoa] (nome científico: Panthera leo) é uma espécie de mamífero carnívoro do gênero Panthera e da família Felidae. A espécie é atualmente encontrada na África subsaariana e na Ásia, com uma única população remanescente em perigo, no Parque Nacional da Floresta de Gir, Gujarat, Índia. </p>
           <p>A pelagem é unicolor de coloração castanha, e os machos apresentam uma juba característica. Uma das características mais marcantes da espécie é a presença de um tufo de pelos pretos na cauda, que também possui uma espora. </p>
@@ -83,9 +93,9 @@
       </div>
     </section>
 
-    <section class="grid-section faq" id="faq">
+    <section class="grid-section faq" id="faq" data-anime="scroll">
       <h1 class="titulo">FAQ</h1>
-      <dl class="faqLista js-accordion">
+      <dl class="faqLista js-accordion" data-anime="accordion">
         <dt>Qual a idade dos animais?</dt>
         <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
         <dt>Eles são fantásticos?</dt>
@@ -96,10 +106,31 @@
         <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</dd>
       </dl>
     </section>
-    <section class="grid-section contato" id="contato">
+    <section class="grid-section numero" data-anime="scroll">
+      <h1 class="titulo">Números</h1>
+      <div class="numeros-grid">
+        <div class="numero-animal">
+          <h3>Lobos</h3>
+          <span data-numero="">4874</span>
+        </div>
+        <div class="numero-animal">
+          <h3>Raposas</h3>
+          <span data-numero="">5274</span>
+        </div>
+        <div class="numero-animal">
+          <h3>Esquilos</h3>
+          <span data-numero="">12300</span>
+        </div>
+        <div class="numero-animal">
+          <h3>Ursos</h3>
+          <span data-numero="">234</span>
+        </div>
+      </div>
+    </section>
+    <section class="grid-section contato" id="contato" data-anime="scroll">
       <h1 class="titulo">Contato</h1>
-      <div class="mapa">
-        <img src="./img/mapa.png" alt="">
+      <div class="mapa" data-tooltip aria-label="Endereço pŕoximo ao estacionamento">
+        <img src="./img/mapa.png">
       </div>
       <ul class="dados">
         <li>contato@origamid.com</li>
@@ -126,7 +157,7 @@
       </form>
     </div>
   </section>
-  <script src="./script.js"></script>
+  <script src="./JS/script.js"></script>
 </body>
 
 </html>
