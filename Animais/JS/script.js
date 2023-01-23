@@ -184,35 +184,60 @@ function initMenuMobile() {
 }
 initMenuMobile()
 
-function initAnimaNumeros(){
-  function animaNumeros(){
-    const numeros = document.querySelectorAll('[data-numero]');
+// function initAnimaNumeros(){
+//   function animaNumeros(){
+//     const numeros = document.querySelectorAll('[data-numero]');
 
-    numeros.forEach((numero) => {
-      const total = +numero.innerText;
-      const inscremento = Math.floor(total/100)
-      let start = 0
-      const timer=setInterval(() => {
-        start = start + inscremento
-        numero.innerText = start
-        if(start > total){
-          clearInterval(timer)
-        }
-      }, 25 * Math.random())
-    })
+//     numeros.forEach((numero) => {
+//       const total = +numero.innerText;
+//       const inscremento = Math.floor(total/100)
+//       let start = 0
+//       const timer=setInterval(() => {
+//         start = start + inscremento
+//         numero.innerText = start
+//         if(start > total){
+//           clearInterval(timer)
+//         }
+//       }, 25 * Math.random())
+//     })
+//   }
+
+//   function handleMutation(mutation){
+//     if(mutation[0].target.classList.contains('ativo')){
+//       ResizeObserver.disconnect();
+//       animaNumeros()
+//     }
+//   }
+//   const observerTarget = document.querySelector('.numeros')
+//   const observer = new MutationObserver(handleMutation)
+
+//   observer.observe(observerTarget, {attributes: true})
+// }
+// initAnimaNumeros()
+
+function initFuncionamento(){
+  const funcionamento= document.querySelector('[data-semana]');
+  const diasSemana = funcionamento.dataset.semana.split(",").map(Number);
+  const horarioSemana = funcionamento.dataset.horario.split(",").map(Number);
+  const dataAgora=new Date()
+  const diaAgora=dataAgora.getDay()
+  const horarioAgora=dataAgora.getHours()
+
+  const semanaAberto = diasSemana.indexOf(diaAgora) !== -1;
+  const horarioAberto = (horarioAgora >= horarioSemana[0] && horarioAgora < horarioSemana[1]);
+ if(semanaAberto && horarioAberto){
+   funcionamento.classList.add('aberto')
+ }
+    
   }
 
-  function handleMutation(mutation){
-    if(mutation[0].target.classList.contains('ativo')){
-      ResizeObserver.disconnect();
-      animaNumeros()
-    }
-  }
-  const observerTarget = document.querySelector('.numeros')
-  const observer = new MutationObserver(handleMutation)
+  
+  
 
-  observer.observe(observerTarget, {attributes: true})
-}
+  
 
+
+
+initFuncionamento();
 
 
